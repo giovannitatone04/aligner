@@ -1,0 +1,8 @@
+brand,polymer,structure,thickness_nominal,manufacturer,source
+Invisalign (SmartTrack),TPU (multilayer),multilayer,0.75 mm,Align Technology,Daniele et al. 2021
+Zendura FLX,TPU,single layer,0.75 mm,Bay Materials,Daniele et al. 2021
+Duran,PET-G,single layer,0.75 mm,Scheu Dental,Albertini et al. 2022
+Erkoloc-Pro,PET-G/TPU,multilayer,1.0 mm,Erkodent,Albertini et al. 2022
+Durasoft,TPU/PC,multilayer,1.2 mm,Scheu Dental,Albertini et al. 2022
+Taglus Premium,PET-G,single layer,0.75 mm,Taglus,Olteanu et al. 2024
+CA Prodin+,Copolyester + TPE,multilayer,0.75 mm,CA Digital,Olteanu et al. 2024

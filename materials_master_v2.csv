@@ -1,0 +1,13 @@
+brand,polymer,polymer_family,structure,thickness_nominal_mm,manufacturer,evidence_type,source,notes
+F22 Aligner,TPU,TPU_family,single_layer,0.75,Sweden & Martina,direct_peer_reviewed,Lombardo et al. 2017; Palone et al. 2021,TPU reported directly; Palone 2021 lists material as 'F22 Polyurethane'.
+F22 Evoflex,polyurethane,TPU_family,single_layer,,Sweden & Martina,direct_peer_reviewed,Albertini et al. 2022,Polyurethane reported directly; nominal thickness not clearly reported in the extracted table.
+Nuvola,PET-G,PETG_family,single_layer,0.75,GEO srl,direct_peer_reviewed,Ercoli et al. 2014; Palone et al. 2021,Ercoli 2014 reports Nuvola as PETG; Palone 2021 confirms PET-G and nominal thickness 0.75 mm.
+Invisalign,SmartTrack multilayer aromatic thermoplastic polyurethane,TPU_family,multilayer,0.75,Align Technology,direct_peer_reviewed,Bernard et al. 2020; Palone et al. 2021,Bernard 2020 identifies SmartTrack as multilayer thermoplastic polyurethane with integrated elastomer.
+ClearCorrect,polyurethane-based material (Zendura),TPU_family,single_layer_or_proprietary,,ClearCorrect LLC,direct_peer_reviewed,Bernard et al. 2020,ATR-FTIR identified ClearCorrect as polyurethane-based material.
+Minor Tooth Movement,PETG-based copolyester (Essix Ace-based),PETG_family,single_layer_or_proprietary,,Dentsply Sirona,direct_peer_reviewed,Bernard et al. 2020,ATR-FTIR identified MTM aligners as PETG-based polyester.
+Duran,PET-G,PETG_family,single_layer,0.75,SCHEU,direct_peer_reviewed,Lombardo et al. 2017; Albertini et al. 2022,PET-G reported directly.
+Erkoloc-Pro,PET-G/TPU,multilayer_mixed,multilayer,1.0,Erkodent,direct_peer_reviewed,Lombardo et al. 2017; Albertini et al. 2022,Multilayer PET-G/TPU reported directly.
+Durasoft,TPU/PC,multilayer_mixed,multilayer,1.2,SCHEU,direct_peer_reviewed,Lombardo et al. 2017; Albertini et al. 2022,Multilayer TPU/polycarbonate reported directly.
+Airnivol,PET-G,PETG_family,single_layer,0.75,Airnivol srl,direct_peer_reviewed,Palone et al. 2021,Included mainly for thickness/gap comparison.
+ALL IN,PET-G,PETG_family,single_layer,0.8,Micerium,direct_peer_reviewed,Palone et al. 2021,Included mainly for thickness/gap comparison.
+Arc Angel,PET-G,PETG_family,single_layer,0.75,Gruppo Dextra,direct_peer_reviewed,Palone et al. 2021,Included mainly for thickness/gap comparison.

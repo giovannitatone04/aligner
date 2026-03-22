@@ -1,0 +1,6 @@
+brand,polymer,young_modulus_MPa,yield_strength_MPa,time_window,stress_decay_percent,source
+Duran,PET-G,2200,50,15 days,20,Albertini 2022
+Erkoloc-Pro,PET-G/TPU,1800,45,15 days,25,Albertini 2022
+Durasoft,TPU/PC,1500,40,15 days,30,Albertini 2022
+Zendura FLX,TPU,1600,42,24h,35,Lombardo 2017
+Invisalign,TPU,1700,44,24h,30,Lombardo 2017

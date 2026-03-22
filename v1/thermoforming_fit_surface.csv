@@ -1,0 +1,5 @@
+brand,polymer,thickness_pre_mm,thickness_post_mm,region,gap_mm,source
+Duran,PET-G,0.75,0.6,occlusal,0.2,Staderini 2024
+Zendura FLX,TPU,0.75,0.62,occlusal,0.25,Staderini 2024
+Invisalign,TPU,0.75,0.63,cervical,0.18,Palone 2021
+Erkoloc-Pro,PET-G/TPU,1.0,0.8,occlusal,0.22,Palone 2021
