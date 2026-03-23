@@ -1,31 +1,49 @@
-
 import streamlit as st
 
 st.set_page_config(
     page_title="Aligner Predictor",
     page_icon="🦷",
     layout="wide",
-    initial_sidebar_state="expanded",
+    initial_sidebar_state="collapsed",
 )
 
 st.markdown("""
 <style>
-.block-container {padding-top: 1.2rem; padding-bottom: 2rem;}
+[data-testid="stSidebar"] {display: none;}
+[data-testid="collapsedControl"] {display: none;}
+
+.block-container {
+    padding-top: 1.2rem;
+    padding-bottom: 2rem;
+    max-width: 1100px;
+}
+
+body {
+    background: linear-gradient(180deg, #f4f8fc 0%, #eef4fb 100%);
+}
+
 .hero {
-    background: linear-gradient(135deg, #f8fbff 0%, #eef4fb 100%);
-    border: 1px solid #e6edf5;
-    border-radius: 22px;
+    background: rgba(255,255,255,0.58);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 24px;
     padding: 28px;
     margin-bottom: 18px;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
 }
+
 .card {
-    background: #ffffff;
-    border: 1px solid #e8edf5;
-    border-radius: 18px;
+    background: rgba(255,255,255,0.58);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 20px;
     padding: 18px;
     margin-bottom: 14px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
 }
+
 .small {
     color: #5f6b7a;
     font-size: 0.95rem;
@@ -34,6 +52,14 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 st.title("🦷 Aligner Aesthetic & Material Predictor")
+
+nav1, nav2, nav3 = st.columns(3)
+with nav1:
+    st.page_link("Home.py", label="🏠 Home")
+with nav2:
+    st.page_link("pages/1_Strumento.py", label="🧪 Strumento")
+with nav3:
+    st.page_link("pages/3_Fonti.py", label="📚 Fonti")
 
 st.markdown('<div class="hero">', unsafe_allow_html=True)
 st.subheader("Una webapp per stimare la suscettibilità estetica dei materiali per aligner")
@@ -48,8 +74,12 @@ st.markdown(
     'i dati disponibili su staining, proprietà meccaniche e caratteristiche superficiali.</p>',
     unsafe_allow_html=True
 )
-st.page_link("pages/1_Strumento.py", label="Vai allo strumento", icon="🧪")
-st.page_link("pages/2_Fonti.py", label="Vai alle fonti", icon="📚")
+
+b1, b2 = st.columns(2)
+with b1:
+    st.page_link("pages/1_Strumento.py", label="Vai allo strumento", icon="🧪")
+with b2:
+    st.page_link("pages/3_Fonti.py", label="Vai alle fonti", icon="📚")
 st.markdown("</div>", unsafe_allow_html=True)
 
 c1, c2, c3 = st.columns(3)
