@@ -1,0 +1,484 @@
+/* ================================================================
+   PolyStain Design System — Global Stylesheet
+   Dark: #07070d · Light: #f5f2ed · Accento oro
+   ================================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Mono:wght@300;400;500&family=Syne:wght@700;800&display=swap');
+
+/* ── Token: light (default) ─────────────────────────────────── */
+:root {
+  --bg:         #f5f2ed;
+  --surface:    rgba(0,0,0,0.04);
+  --surface2:   rgba(0,0,0,0.07);
+  --border:     rgba(0,0,0,0.10);
+  --border2:    rgba(0,0,0,0.18);
+  --accent:     rgba(120,88,30,1);
+  --accent-dim: rgba(120,88,30,0.07);
+  --text:       rgba(30,25,15,0.9);
+  --text2:      #3d3830;
+  --green:      #166534;
+  --yellow:     #92400e;
+  --orange:     #c2410c;
+  --red:        #b91c1c;
+  --radius:     8px;
+  --radius-lg:  14px;
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-ui:      'DM Mono', monospace;
+  --font-title:   'Syne', sans-serif;
+}
+
+/* ── Base reset ─────────────────────────────────────────────── */
+html, body,
+[data-testid="stAppViewContainer"],
+[data-testid="stMain"] {
+  background: var(--bg) !important;
+  color: var(--text) !important;
+  font-family: var(--font-ui) !important;
+}
+
+/* ── Hide Streamlit chrome ──────────────────────────────────── */
+[data-testid="stHeader"]         { display: none !important; }
+[data-testid="stDecoration"]     { display: none !important; }
+[data-testid="stStatusWidget"]   { display: none !important; }
+[data-testid="stToolbar"]        { display: none !important; }
+[data-testid="stSidebar"]        { display: none !important; }
+[data-testid="collapsedControl"] { display: none !important; }
+
+.block-container {
+  padding-top: 1.6rem !important;
+  padding-bottom: 4rem !important;
+  max-width: 900px !important;
+}
+
+/* ── Entry animation ────────────────────────────────────────── */
+@keyframes ap-fade {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Navbar ─────────────────────────────────────────────────── */
+.ap-nav {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+  background: var(--surface);
+  border: 0.5px solid var(--border2);
+  border-radius: 999px;
+  padding: 3px;
+  margin-bottom: 2.5rem;
+  width: fit-content;
+  animation: ap-fade 0.4s ease-out both;
+}
+.ap-nav a {
+  font-family: var(--font-ui) !important;
+  font-size: 0.72rem !important;
+  font-weight: 400 !important;
+  color: var(--text2) !important;
+  text-decoration: none !important;
+  padding: 5px 16px;
+  border-radius: 999px;
+  letter-spacing: 0.06em;
+  transition: color 0.15s, background 0.15s;
+}
+.ap-nav a:hover { color: var(--accent) !important; background: var(--accent-dim); }
+.ap-nav a.active {
+  color: var(--bg) !important;
+  background: var(--accent);
+}
+
+/* ── Disclaimer ─────────────────────────────────────────────── */
+.ap-disclaimer {
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  font-weight: 300;
+  color: var(--accent);
+  background: var(--accent-dim);
+  border: 0.5px solid rgba(210,185,140,0.18);
+  border-radius: var(--radius);
+  padding: 8px 14px;
+  margin-bottom: 2rem;
+  letter-spacing: 0.04em;
+  animation: ap-fade 0.4s ease-out 0.1s both;
+}
+
+/* ── Hero ───────────────────────────────────────────────────── */
+.ap-hero {
+  margin-bottom: 2.5rem;
+  animation: ap-fade 0.5s ease-out both;
+}
+.ap-hero-eyebrow {
+  font-family: var(--font-ui);
+  font-size: 0.68rem;
+  font-weight: 300;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text2);
+  margin-bottom: 12px;
+}
+.ap-hero h1 {
+  font-family: var(--font-display) !important;
+  font-size: clamp(2.4rem, 5vw, 3.2rem) !important;
+  font-weight: 300 !important;
+  line-height: 1.12 !important;
+  letter-spacing: -0.01em !important;
+  color: var(--text) !important;
+  margin: 0 0 14px !important;
+}
+.ap-hero h1 em {
+  font-style: italic;
+  color: var(--accent);
+}
+.ap-hero p {
+  font-family: var(--font-ui) !important;
+  font-size: 0.78rem !important;
+  font-weight: 300 !important;
+  color: var(--text2) !important;
+  line-height: 1.7 !important;
+  max-width: 540px;
+  margin: 0 !important;
+}
+
+/* ── Section title ──────────────────────────────────────────── */
+.ap-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 2.4rem 0 1.2rem;
+}
+.ap-section-label {
+  font-family: var(--font-ui);
+  font-size: 0.66rem;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.ap-section-line {
+  flex: 1;
+  height: 0.5px;
+  background: var(--border);
+}
+
+/* ── Card ───────────────────────────────────────────────────── */
+.ap-card {
+  background: var(--surface);
+  border: 0.5px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 18px 20px;
+  margin-bottom: 10px;
+  animation: ap-fade 0.45s ease-out both;
+}
+.ap-card-label {
+  font-family: var(--font-ui);
+  font-size: 0.66rem;
+  font-weight: 300;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text2);
+  margin-bottom: 10px;
+}
+.ap-card-value {
+  font-family: var(--font-display);
+  font-size: 2.6rem;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  color: var(--text);
+}
+.ap-card-sub {
+  font-family: var(--font-ui);
+  font-size: 0.76rem;
+  font-weight: 300;
+  color: var(--text2);
+  margin-top: 6px;
+  line-height: 1.6;
+}
+
+/* ── Score card risk variants ───────────────────────────────── */
+.ap-card.low      .ap-card-value { color: var(--green); }
+.ap-card.mid      .ap-card-value { color: var(--yellow); }
+.ap-card.high-mid .ap-card-value { color: var(--orange); }
+.ap-card.high     .ap-card-value { color: var(--red); }
+
+/* ── Progress bar ───────────────────────────────────────────── */
+.ap-bar-track {
+  height: 2px;
+  background: var(--border2);
+  border-radius: 2px;
+  margin-top: 14px;
+  overflow: hidden;
+}
+.ap-bar-fill {
+  height: 100%;
+  border-radius: 2px;
+}
+
+/* ── Step list ──────────────────────────────────────────────── */
+.ap-steps { margin: 0; padding: 0; }
+.ap-step {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  padding: 20px 0;
+  border-top: 0.5px solid var(--border);
+  animation: ap-fade 0.5s ease-out both;
+}
+.ap-step:last-child { border-bottom: 0.5px solid var(--border); }
+.ap-step-num {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 300;
+  color: var(--text2);
+  line-height: 1;
+  flex-shrink: 0;
+  width: 48px;
+  text-align: right;
+  opacity: 0.4;
+}
+.ap-step-content { flex: 1; padding-top: 4px; }
+.ap-step-tag {
+  font-family: var(--font-ui);
+  font-size: 0.66rem;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+.ap-step-title {
+  font-family: var(--font-title);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 5px;
+}
+.ap-step-body {
+  font-family: var(--font-ui);
+  font-size: 0.74rem;
+  font-weight: 300;
+  color: var(--text2);
+  line-height: 1.65;
+}
+
+/* ── Footer buttons ─────────────────────────────────────────── */
+.ap-footer-btns {
+  display: flex;
+  gap: 12px;
+  margin-top: 2.5rem;
+}
+.ap-footer-btn {
+  flex: 1;
+  display: block;
+  font-family: var(--font-ui);
+  font-size: 0.74rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  color: var(--accent) !important;
+  background: var(--accent-dim);
+  border: 0.5px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 11px 18px;
+  text-align: center;
+  text-decoration: none !important;
+  transition: background 0.18s;
+}
+.ap-footer-btn:hover { background: var(--accent-dim); filter: brightness(1.4); }
+
+/* ── Materials row ──────────────────────────────────────────── */
+.ap-materials {
+  font-family: var(--font-ui);
+  font-size: 0.68rem;
+  font-weight: 300;
+  color: var(--text2);
+  letter-spacing: 0.06em;
+  margin-bottom: 2.5rem;
+  line-height: 2;
+  animation: ap-fade 0.4s ease-out 0.15s both;
+}
+
+/* ── Streamlit widget overrides ─────────────────────────────── */
+h1, h2, h3, .stTitle {
+  font-family: var(--font-display) !important;
+  color: var(--text) !important;
+  font-weight: 300 !important;
+}
+
+.stSelectbox > div > div,
+.stNumberInput > div > div > input {
+  background: var(--surface) !important;
+  border: 0.5px solid var(--border2) !important;
+  color: var(--text) !important;
+  font-family: var(--font-ui) !important;
+  font-size: 0.8rem !important;
+  border-radius: var(--radius) !important;
+}
+
+.stSlider > div { font-family: var(--font-ui) !important; }
+
+label, [data-testid="stWidgetLabel"] {
+  font-family: var(--font-ui) !important;
+  font-size: 0.72rem !important;
+  font-weight: 300 !important;
+  letter-spacing: 0.06em !important;
+  color: var(--text2) !important;
+}
+
+.stButton > button,
+.stDownloadButton > button,
+.stFormSubmitButton > button,
+[data-testid="stBaseButton-secondary"],
+[data-testid="stBaseButton-primary"],
+button[kind="secondary"],
+button[kind="primary"] {
+  background: var(--accent-dim) !important;
+  border: 0.5px solid var(--accent) !important;
+  color: var(--accent) !important;
+  font-family: var(--font-ui) !important;
+  font-size: 0.78rem !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.08em !important;
+  border-radius: var(--radius) !important;
+  transition: background 0.18s, filter 0.18s !important;
+}
+.stButton > button:hover,
+.stDownloadButton > button:hover,
+.stFormSubmitButton > button:hover,
+[data-testid="stBaseButton-secondary"]:hover,
+[data-testid="stBaseButton-primary"]:hover,
+button[kind="secondary"]:hover,
+button[kind="primary"]:hover {
+  background: var(--accent-dim) !important;
+  border-color: var(--accent) !important;
+  color: var(--accent) !important;
+  filter: brightness(1.6);
+}
+
+.stProgress > div > div { background: var(--surface2) !important; }
+.stProgress > div > div > div { background: var(--accent) !important; }
+
+/* ── Dataframe / Table ──────────────────────────────────────────── */
+.stDataFrame, .stTable {
+  background: var(--surface) !important;
+  border: 0.5px solid var(--border) !important;
+  border-radius: var(--radius) !important;
+  font-family: var(--font-ui) !important;
+  font-size: 0.76rem !important;
+}
+
+/* wrapper interno */
+[data-testid="stDataFrame"] > div,
+[data-testid="stDataFrame"] [data-testid="stDataFrameResizable"] {
+  background: var(--surface) !important;
+  border-radius: var(--radius) !important;
+}
+
+/* header colonne */
+[data-testid="stDataFrame"] [role="columnheader"],
+[data-testid="stDataFrame"] th {
+  background: var(--surface2) !important;
+  color: var(--accent) !important;
+  font-family: var(--font-ui) !important;
+  font-size: 0.68rem !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.10em !important;
+  text-transform: uppercase !important;
+  border-bottom: 0.5px solid var(--border2) !important;
+  border-right: 0.5px solid var(--border) !important;
+}
+
+/* celle dati */
+[data-testid="stDataFrame"] [role="gridcell"],
+[data-testid="stDataFrame"] td {
+  background: var(--surface) !important;
+  color: var(--text) !important;
+  font-family: var(--font-ui) !important;
+  font-size: 0.75rem !important;
+  border-bottom: 0.5px solid var(--border) !important;
+  border-right: 0.5px solid var(--border) !important;
+}
+
+/* hover riga */
+[data-testid="stDataFrame"] [role="row"]:hover [role="gridcell"] {
+  background: var(--surface2) !important;
+}
+
+/* scrollbar */
+[data-testid="stDataFrame"] ::-webkit-scrollbar {
+  height: 4px; width: 4px;
+}
+[data-testid="stDataFrame"] ::-webkit-scrollbar-track {
+  background: var(--surface);
+}
+[data-testid="stDataFrame"] ::-webkit-scrollbar-thumb {
+  background: var(--border2);
+  border-radius: 2px;
+}
+
+.stTabs [data-baseweb="tab"] {
+  font-family: var(--font-ui) !important;
+  font-size: 0.72rem !important;
+  letter-spacing: 0.08em !important;
+  color: var(--text2) !important;
+}
+.stTabs [data-baseweb="tab"][aria-selected="true"] {
+  color: var(--accent) !important;
+}
+.stTabs [data-baseweb="tab-border"] {
+  background: var(--accent) !important;
+  height: 0.5px !important;
+}
+
+.stMarkdown p {
+  font-family: var(--font-ui) !important;
+  font-size: 0.78rem !important;
+  font-weight: 300 !important;
+  color: var(--text2) !important;
+  line-height: 1.7 !important;
+}
+
+.stCaption {
+  font-family: var(--font-ui) !important;
+  font-size: 0.68rem !important;
+  color: var(--text2) !important;
+}
+
+.stExpander {
+  background: var(--surface) !important;
+  border: 0.5px solid var(--border) !important;
+  border-radius: var(--radius-lg) !important;
+}
+.stExpander summary,
+.stExpander [data-testid="stExpanderToggleIcon"] {
+  font-family: var(--font-ui) !important;
+  font-size: 0.74rem !important;
+  font-weight: 400 !important;
+  color: var(--text2) !important;
+  letter-spacing: 0.06em !important;
+}
+
+[data-testid="stPopover"] > div,
+[data-testid="stPopoverBody"],
+[data-baseweb="popover"],
+[data-baseweb="popover"] > div,
+div[class*="stPopover"] {
+  background: var(--bg) !important;
+  border: 0.5px solid var(--border2) !important;
+  border-radius: var(--radius) !important;
+  font-family: var(--font-ui) !important;
+  font-size: 0.76rem !important;
+  color: var(--text) !important;
+}
+
+[data-testid="stPopoverBody"] p,
+[data-testid="stPopoverBody"] .stMarkdown p {
+  color: var(--text) !important;
+  font-size: 0.76rem !important;
+}
+
+[data-testid="stPageLink"] a {
+  font-family: var(--font-ui) !important;
+  font-size: 0.76rem !important;
+  color: var(--text2) !important;
+}

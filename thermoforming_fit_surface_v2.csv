@@ -1,0 +1,7 @@
+brand,polymer,polymer_family,thickness_pre_mm,thickness_post_mm,gap_mm,region,source,notes
+Airnivol,PET-G,PETG_family,0.75,,,overall,Palone et al. 2021,Direct table entry for nominal thickness/material; brand-specific post-thermoforming value not extracted here.
+ALL IN,PET-G,PETG_family,0.8,,,overall,Palone et al. 2021,Direct table entry for nominal thickness/material; significant anterior-posterior gap differences reported.
+Arc Angel,PET-G,PETG_family,0.75,,,overall,Palone et al. 2021,Direct table entry for nominal thickness/material; significant anterior-posterior gap differences reported.
+F22 Aligner,TPU,TPU_family,0.75,,,overall,Palone et al. 2021,Direct table entry for nominal thickness/material; thickness remained more homogeneous across the arch than other brands.
+Invisalign,SmartTrack multilayer aromatic thermoplastic polyurethane,TPU_family,0.75,,,overall,Palone et al. 2021,Direct table entry for nominal thickness/material.
+Nuvola,PET-G,PETG_family,0.75,,,overall,Ercoli et al. 2014; Palone et al. 2021,Ercoli 2014 reports Nuvola PETG thickness schedule 0.75/0.85/1.0 mm through treatment phases; Palone 2021 used a 0.75 mm passive aligner.

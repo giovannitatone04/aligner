@@ -1,0 +1,26 @@
+brand,polymer_family,agent,exposure_time,exposure_hours,deltaE,source,peer_reviewed,quantitative,notes;
+Invisalign,TPU_family,coffee,12 h,12.0,7.12,Bernard et al. 2020,True,True,Crystals subgroup; direct row from Table 2.
+Invisalign,TPU_family,coffee,7 days,168.0,27.76,Bernard et al. 2020,True,True,Crystals subgroup; direct row from Table 2.
+Invisalign,TPU_family,tea,12 h,12.0,1.56,Bernard et al. 2020,True,True,Crystals subgroup; direct row from Table 2.
+Invisalign,TPU_family,tea,7 days,168.0,23.01,Bernard et al. 2020,True,True,Crystals subgroup; direct row from Table 2.
+Invisalign,TPU_family,red_wine,12 h,12.0,5.66,Bernard et al. 2020,True,True,Crystals subgroup; direct row from Table 2.
+Invisalign,TPU_family,red_wine,7 days,168.0,15.75,Bernard et al. 2020,True,True,Crystals subgroup; direct row from Table 2.
+Invisalign,TPU_family,cola,12 h,12.0,0.92,Bernard et al. 2020,True,True,Crystals subgroup; direct row from Table 2.
+Invisalign,TPU_family,cola,7 days,168.0,0.74,Bernard et al. 2020,True,True,Crystals subgroup; direct row from Table 2.
+"Invisalign,TPU_family,cigarette_smoke,,,,Galisteu-Luiz et al. 2025,True,False,""Direct evidence of altered optical properties, but no numerical ΔE extracted here";" do not use for numeric prediction."""
+ClearCorrect,TPU_family,coffee,12 h,12.0,0.98,Bernard et al. 2020,True,True,Crystals subgroup; direct row from Table 2.
+ClearCorrect,TPU_family,coffee,7 days,168.0,1.97,Bernard et al. 2020,True,True,Crystals subgroup; direct row from Table 2.
+ClearCorrect,TPU_family,tea,12 h,12.0,0.85,Bernard et al. 2020,True,True,Crystals subgroup; direct row from Table 2.
+ClearCorrect,TPU_family,tea,7 days,168.0,19.28,Bernard et al. 2020,True,True,Crystals subgroup; direct row from Table 2.
+ClearCorrect,TPU_family,red_wine,12 h,12.0,1.47,Bernard et al. 2020,True,True,Crystals subgroup; direct row from Table 2.
+ClearCorrect,TPU_family,red_wine,7 days,168.0,1.22,Bernard et al. 2020,True,True,Crystals subgroup; direct row from Table 2.
+ClearCorrect,TPU_family,cola,12 h,12.0,0.88,Bernard et al. 2020,True,True,Crystals subgroup; direct row from Table 2.
+ClearCorrect,TPU_family,cola,7 days,168.0,0.87,Bernard et al. 2020,True,True,Crystals subgroup; direct row from Table 2.
+Minor Tooth Movement,PETG_family,coffee,12 h,12.0,0.91,Bernard et al. 2020,True,True,Crystals subgroup; PETG-based material.
+Minor Tooth Movement,PETG_family,coffee,7 days,168.0,1.45,Bernard et al. 2020,True,True,Crystals subgroup; PETG-based material.
+Minor Tooth Movement,PETG_family,tea,12 h,12.0,1.03,Bernard et al. 2020,True,True,Crystals subgroup; PETG-based material.
+Minor Tooth Movement,PETG_family,tea,7 days,168.0,21.21,Bernard et al. 2020,True,True,Crystals subgroup; PETG-based material.
+Minor Tooth Movement,PETG_family,red_wine,12 h,12.0,0.9,Bernard et al. 2020,True,True,Crystals subgroup; PETG-based material.
+Minor Tooth Movement,PETG_family,red_wine,7 days,168.0,0.81,Bernard et al. 2020,True,True,Crystals subgroup; PETG-based material.
+Minor Tooth Movement,PETG_family,cola,12 h,12.0,0.65,Bernard et al. 2020,True,True,Crystals subgroup; PETG-based material.
+Minor Tooth Movement,PETG_family,cola,7 days,168.0,0.78,Bernard et al. 2020,True,True,Crystals subgroup; PETG-based material.
